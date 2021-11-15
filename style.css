@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* REUSABLE CLASSES */
+.flex { display: flex; }
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.relative { position: relative; }
+.absolute { position: absolute; }
