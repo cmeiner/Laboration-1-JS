@@ -1,3 +1,6 @@
+
+
+
 function beginGame() {
     let userName = prompt("Please enter your name:");
     alert("Hello " + userName + ". Welcome to my small puzzlegame.");
@@ -6,39 +9,130 @@ function beginGame() {
     alert("Ready when you are, " + userName + "!");
 
     alert("You find yourself in the middle of a dimly lit room. You hear water dripping and the distict smell of cellar is impossible to ignore.");
-    alert("There are some stairs in front of leading down. Behind you are some stairs leading up. To your left is another room and to your right is a hallway.");
+    alert("There are some stairs in front of you leading down. Behind you are some stairs leading up. To your left is another room and to your right is a hallway.");
     let firstMove = prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-    console.log(firstMove);
-    
-}
-// Går bakåt.
-alert("You go back up the stairs. There's a door but there's no keyhole. The door won't budge.");
-alert("You decide to go back down the stairs to the previous room.");
-prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-
-// Går vänster.
-alert("You go left into the room. There are some shelves filled with junk. However, you notice a small key in the corner of the room.");
-prompt("What do you want to do? Pick up the key or go back into the previous room?");
-prompt("You pick up the key and put in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
-alert("Waiting here will do no good. You decide to return to the previous room.");
-prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-
-// Går framåt utan nyckel.
-prompt("You go forward, down the stairs. There appears to be a door. Do you open the door or go back?");
-alert("The door is locked and there's no way you can break through it. Perhaps there's a key somewhere.");
-alert("You go back up the stairs and into the previous room.");
+    const convertedAnswer = firstMove.toLowerCase();
+    if (convertedAnswer === "hallway" || convertedAnswer === "right") {
+        hallwayOne();
+    } else if  (convertedAnswer === "room" || convertedAnswer === "left")  {
+        keyRoom();
+    } else if (convertedAnswer === "forward") {
+        stairsDownOneNoKey();
+    } else if ( convertedAnswer === "backward" || convertedAnswer === "backwards" || convertedAnswer === "back") {
+        backStairs();
+    }
+};
 
 // Går höger.
-prompt("You go right into the hallway. There's a room to your left. Do you want to continue down the hallway or take a left into the room?");
-// Går höger -> vänster.
-alert("You go left into the room. The room is filled with old and empty crates. One of them contains a crowbar.");
-prompt("What do you want to do? Pick up the crowbar or go back into the previous room?");
-alert("You pick up the crowbar, there's nothing else to do in this room.");
-alert("You decide to go back into the hallway.");
-prompt("Where do you want to go? Further down the hallway or back into the first room?");
+function hallwayOne() {
+    prompt("You go right into the hallway. There's a room to your left. Do you want to continue down the hallway or take a left into the room?");
+    prompt("Where do you want to go? Further down the hallway or back into the first room?");
+}
+// Går höger -> Vänster. 
+function boxRoom() {
+    alert("You go left into the room. The room is filled with old and empty crates. One of them contains a crowbar.");
+    prompt("What do you want to do? Pick up the crowbar or go back into the previous room?");
+    alert("You pick up the crowbar, there's nothing else to do in this room.");
+    alert("You decide to go back into the hallway.");
+}
 
-alert("You go further down the hallway, you take a left turn and the hallway continues.");
-prompt("There's a door in front of you and a room to your right. Where do you want to go?");
+// Går vänster.
+function keyRoom() {
+    alert("You go left into the room. There are some shelves filled with junk. However, you notice a small key in the corner of the room.");
+    prompt("What do you want to do? Pick up the key or go back into the previous room?");
+    prompt("You pick up the key and put in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
+    alert("Waiting here will do no good. You decide to return to the previous room.");
+    prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
+}
+// Går bakåt, upp för trappan.
+function backStairs() {
+    alert("You go back up the stairs. There's a door but there's no keyhole. The door won't budge.");
+    alert("You decide to go back down the stairs to the previous room.");
+    prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
+}
+// Går ner för trappan fast utan nyckel.
+function stairsDownOneNoKey() {
+    prompt("You go forward, down the stairs. There appears to be a door. Do you open the door or go back?");
+    alert("The door is locked and there's no way you can break through it. Perhaps there's a key somewhere.");
+    alert("You go back up the stairs and into the previous room.");
+}
+
+function stairsDownOne() {
+
+}
+
+
+
+
+function couchRoom() {
+    
+}
+
+function fuseBoxRoom() {
+    
+}
+
+function fuseBoxRoomNoFuse() {
+    
+}
+
+function furnaceRoom() {
+    
+}
+
+function blackRoom() {
+    
+}
+
+function storageRoom() {
+    
+}
+
+function smallRoom() {
+    
+}
+
+function spiralStairsRoom() {
+    
+}
+
+function kitchenRoom() {
+    
+}
+
+function livingRoom() {
+    
+}
+
+function hallwayTwo() {
+    alert("You go further down the hallway, you take a left turn and the hallway continues.");
+    prompt("There's a door in front of you and a room to your right. Where do you want to go?");
+    
+}
+
+function hallwayDoor() {
+    
+}
+
+function hallwayThree() {
+    
+}
+
+function hallwayFour() {
+    
+}
+
+function hallwayHouse() {
+    
+}
+
+
+// Går vänster.
+
+// Går framåt utan nyckel.
+
+// Går höger.
+
 
 // Går höger in i rummet. 
 alert("You take a right into the room. There's a worn down couch and an empty table.");
@@ -170,9 +264,4 @@ prompt("Have you changed your mind and want to go through the door?");
 // Om ja.
 alert("You go through the door leading outside. You find yourself in front of the house, free to leave as you wish.");
 
-alert("Congratualtions" + userName + " you navigated through my small puzzlegame.");
-
-
-
-prompt("");
-alert("");
+alert("Congratualtions" + userName + " you navigated through my small puzzlegame."); */
