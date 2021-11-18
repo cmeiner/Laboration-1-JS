@@ -52,7 +52,7 @@ function backStairsKey() {
 // Meningelöst att återvända till vänster om key redan plockats upp.
 function keyRoomKeyTaken() {
     alert("You've already been in there, there's not really any point in going there again");
-    alert("Perhaps you shuold try to go down the stairs this time.");
+    alert("Perhaps you should try to go down the stairs this time.");
     let gameMove = prompt("Would you like to go down the stairs?");
     const convertedAnswer = gameMove.toLowerCase();
     if (convertedAnswer === "yes" || convertedAnswer === "yes go down" || convertedAnswer === "go down") {
@@ -211,7 +211,7 @@ function combinationLock() {
 function combinationLockRight() {
     alert("The code was correct, you open the door and find yourself in a lit up hallway of a house.");
     alert("There's a kitchen to your left and a living room to your right.");
-    let gameMove = prompt("Where do you go? Left into the kitchen or righ into the living room?");
+    let gameMove = prompt("Where do you go? Left into the kitchen or right into the living room?");
     const convertedAnswer = gameMove.toLowerCase();
     if (convertedAnswer === "left" || convertedAnswer === "kitchen" || convertedAnswer === "go left" || convertedAnswer === "into the kitchen") {
         kitchenRoom();
@@ -258,5 +258,5 @@ function doorFinal() {
 };
 // Slutet av spelet.
 function endGame() {
-    alert("Congratualtions, you navigated through my small puzzlegame.");
+    alert("Congratulations, you navigated through my small puzzlegame.");
 };
