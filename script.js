@@ -1,6 +1,3 @@
-
-
-
 function beginGame() {
     let userName = prompt("Please enter your name:");
     alert("Hello " + userName + ". Welcome to my small puzzlegame.");
@@ -10,8 +7,8 @@ function beginGame() {
 
     alert("You find yourself in the middle of a dimly lit room. You hear water dripping and the distict smell of cellar is impossible to ignore.");
     alert("There are some stairs in front of you leading down. Behind you are some stairs leading up. To your left is another room and to your right is a hallway.");
-    let firstMove = prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-    const convertedAnswer = firstMove.toLowerCase();
+    let gameMove = prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
+    const convertedAnswer = gameMove.toLowerCase();
     if (convertedAnswer === "hallway" || convertedAnswer === "right") {
         hallwayOne();
     } else if  (convertedAnswer === "room" || convertedAnswer === "left")  {
@@ -23,6 +20,17 @@ function beginGame() {
     }
 };
 
+/* 
+function roomOneReturn() {
+    let gameMove = 
+    const convertedAnswer = gameMove.toLowerCase();
+    if ( convertedAnswer === " " || convertedAnswer === " ") {
+
+    } else if (convertedAnswer === " " || convertedAnswer === " ") {
+    
+}
+}
+
 // Går höger.
 function hallwayOne() {
     prompt("You go right into the hallway. There's a room to your left. Do you want to continue down the hallway or take a left into the room?");
@@ -31,10 +39,30 @@ function hallwayOne() {
 // Går höger -> Vänster. 
 function boxRoom() {
     alert("You go left into the room. The room is filled with old and empty crates. One of them contains a crowbar.");
-    prompt("What do you want to do? Pick up the crowbar or go back into the previous room?");
+    let gameMove = prompt("What do you want to do? Pick up the crowbar or go back into the previous room?");
+    const convertedAnswer = gameMove.toLowerCase();
+    if ( convertedAnswer === "yes" || convertedAnswer === "pick up" || convertedAnswer ==="crowbar" || convertedAnswer ==="pick up crowbar") {
+        pickUpCrowbar();
+    } else if ( convertedAnswer === "yes" || convertedAnswer === "pick up" || convertedAnswer ==="crowbar" || convertedAnswer ==="pick up crowbar") {
+
+    }
+
+} */
+
+/* let gameMove = 
+const convertedAnswer = gameMove.toLowerCase();
+if ( convertedAnswer === " " || convertedAnswer === " ") {
+
+} else if (convertedAnswer === " " || convertedAnswer === " ") {
+
+}
+
+function pickUpCrowbar() {
     alert("You pick up the crowbar, there's nothing else to do in this room.");
     alert("You decide to go back into the hallway.");
     prompt("Where do you want to go? Further down the hallway or back into the first room?");
+    
+
 }
 // Går höger -> framåt.
 function hallwayTwo() {
@@ -44,17 +72,33 @@ function hallwayTwo() {
 // Går vänster.
 function keyRoom() {
     alert("You go left into the room. There are some shelves filled with junk. However, you notice a small key in the corner of the room.");
-    prompt("What do you want to do? Pick up the key or go back into the previous room?");
-    prompt("You pick up the key and put in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
-    alert("Waiting here will do no good. You decide to return to the previous room.");
-    prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-}
+    let gameMove = prompt("What do you want to do? Pick up the key or go back into the previous room?");
+    // alert("Waiting here will do no good. You decide to return to the previous room.");
+    const convertedAnswer = gameMove.toLowerCase();
+    if (convertedAnswer === "pick" || convertedAnswer === "pick up key" || convertedAnswer === "key") {
+        pickUpKey();
+    } else if  (convertedAnswer === "back" || convertedAnswer === "go back")  {
+        prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?"); 
+    }
+};
+
+function pickUpKey() {
+    let gameMove = prompt("You pick up the key and put in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
+    const convertedAnswer = gameMove.toLowerCase();
+    if (convertedAnswer === "go back" || convertedAnswer === "back") {
+        pickUpKey();
+    } else if  (convertedAnswer === "stay" || convertedAnswer === "stay here")  {
+        keyRoom();
+    }
+};
+
 // Går bakåt, upp för trappan.
 function backStairs() {
     alert("You go back up the stairs. There's a door but there's no keyhole. The door won't budge.");
     alert("You decide to go back down the stairs to the previous room.");
     prompt("Where would you like to go? Left into the room, right down the hallway, forward down the stairs or backwards up the stairs?");
-}
+};
+
 // Går ner för trappan fast utan nyckel.
 function stairsDownOneNoKey() {
     prompt("You go forward, down the stairs. There appears to be a door. Do you open the door or go back?");
@@ -221,4 +265,4 @@ function doorFinal() {
 // Slut på spelet.
 function endGame() {
     alert("Congratualtions" + userName + " you navigated through my small puzzlegame."); 
-}
+} */
