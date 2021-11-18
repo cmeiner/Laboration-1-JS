@@ -65,7 +65,7 @@ function keyRoomKeyTaken() {
 };
 // Precis som namnet would imply, man väntar på ingenting. 
 function waitForNothing() {
-    alert("You don't wanna wannwa wait for any longer.");
+    alert("You don't wanna wait any longer.");
     stairsDownKey();
 };
 // Går ner för trappan fast utan nyckel.
@@ -102,7 +102,7 @@ function keyRoom() {
 };
 // Kod för att plocka upp nyckel.
 function pickUpKey() {
-    let gameMove = prompt("You pick up the key and put in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
+    let gameMove = prompt("You pick up the key and put it in your pocket. There's nothing else to do in this room. Do you want to go back or stay here?");
     const convertedAnswer = gameMove.toLowerCase();
     if (convertedAnswer === "go back" || convertedAnswer === "back" || convertedAnswer === "leave" || convertedAnswer === "leave room") {
         roomOneReturnWithKey();
