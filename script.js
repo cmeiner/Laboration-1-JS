@@ -6,7 +6,7 @@ function beginGame() {
     alert("There are items scattered around the cellar to help you on your way.");
     alert("Ready when you are, " + userName + "!");
 
-    alert("You find yourself in the middle of a dimly lit room. You hear water dripping and the distict smell of cellar is impossible to ignore.");
+    alert("You find yourself in the middle of a dimly lit room. You hear water dripping and the distinct smell of cellar is impossible to ignore.");
     alert("There are some stairs in front of you leading down. Behind you are some stairs leading up. To your left is another room.");
     let gameMove = prompt("Where would you like to go? Left into the room, forward down the stairs or backwards up the stairs?");
     const convertedAnswer = gameMove.toLowerCase(); /* Denna finns för att svaret i prompten inte skall vara shift-känsligt. */
