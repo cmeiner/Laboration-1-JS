@@ -9,6 +9,7 @@ body {
     background-color: #181818;
     width: 100vw;
     height: 100vh;
+    font-size: 1rem;
 }
 
 .main-content {
@@ -29,6 +30,9 @@ body {
     text-align: center;
 }
 
+.start-text {
+    text-align: center;
+}
 .mm-field:focus {
     border-style: none;
 }
